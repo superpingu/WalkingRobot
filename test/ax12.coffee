@@ -5,14 +5,14 @@ should = chai.should()
 {assert, expect} = chai
 
 describe 'AX12', ->
-    ax12 = positions = driver = {}
+    ax12 = positions = driver = callbacks = {}
     beforeEach ->
         # create a mockup for the ax12 driver object
         positions = {}
         driver =
             position: chai.spy((id) -> positions[id])
             setTorqueSpeed: chai.spy()
-            move: chai.spy()
+            move: chai.spy((id, callback) -> callbacks[id] = callback)
             reset: chai.spy()
         ax12 = require('../lib/robot/ax12')(driver)
 
@@ -106,3 +106,13 @@ describe 'AX12', ->
             template.speed(500)
             template.update()
             driver.setTorqueSpeed.should.not.have.been.called()
+    describe '.moveTo', ->
+        it 'should update speed and torque and call driver\'s move()', (done) ->
+            servo = ax12(140)
+            servo.torque(200)
+            servo.speed(500)
+            servo.moveTo 818, done
+            driver.setTorqueSpeed.should.have.been.called.with(140, 200, -2000, 0)
+            driver.setTorqueSpeed.should.have.been.called.with(140, -1, 500, 0)
+            driver.move.should.have.been.with(818, done)
+            callbacks[140]()
