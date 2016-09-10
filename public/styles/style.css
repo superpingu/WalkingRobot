@@ -1,0 +1,135 @@
+/* general */
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px "Kirvy", Helvetica, Arial, sans-serif;
+  background: #272822;
+
+}
+a {
+  color: #e4342a;
+  text-decoration: none;
+}
+a:hover {
+  color: #e3631b;
+  text-decoration: none;
+}
+h3 {
+    font-size: 2.3vh;
+    font-weight: 700;
+    color: #1f1f1f;
+}
+
+.fa {
+    margin-left: 0.4vh;
+    margin-right: 1.5vh;
+}
+
+.btn {
+  margin: 0.5vmin 2vmin 0.5vmin 3vmin;
+  border-radius: 5px;
+  padding: 0.3vmin;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  display: inline-block;
+  color: #3e3c41;
+  border: 2px #3e3c41 solid;
+}
+.btn:hover {
+  background-color: #3e3c41;
+  color: #e8e3d4;
+}
+.disabled {
+    color: #ab271e;
+    border: 2px #ab271e solid;
+}
+.disabled:hover {
+    color: #ab271e !important;
+    border: 2px #ab271e solid;
+    background: none !important;
+}
+
+/* toolbar */
+.topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7vh;
+    color: white;
+    background: #e4342a;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.94);
+    z-index: 10;
+}
+.topbar-title {
+    position: relative;
+    top: -1.5vh;
+    text-align: center;
+    font-weight: 500;
+    font-size: 3.5vh;
+}
+.topbar-right {
+    position: relative;
+    top: -8.5vh;
+    right: 3vw;
+    text-align: right;
+}
+
+/* content */
+.content {
+    position: absolute;
+    top: 7vh;
+    width: 100%;
+    height: 93vh;
+}
+.editor {
+    position: absolute;
+    top: 2vh;
+    left: 20vw;
+    width: 80vw;
+    height: 91vh;
+}
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    height: 100%;
+    background-color: #4a4b46;
+}
+
+@font-face {
+  font-family: 'Kirvy';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Kirvy-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Kirvy';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Kirvy-Bold.otf);
+}
+
+@font-face {
+  font-family: 'Kirvy';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/Kirvy-Light.otf);
+}
+@font-face {
+  font-family: 'Kirvy';
+  font-style: italic;
+  font-weight: 100;
+  src: url(../fonts/Kirvy-Thin.otf);
+}
+@font-face {
+  font-family: 'Menlo';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Menlo.ttf);
+}

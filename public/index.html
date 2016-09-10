@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Walking Robot Editor</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/font-awesome.css">
+  </head>
+  <body>
+    <div class="topbar">
+      <h2 class="topbar-title">Walking Robot Editor</h2>
+      <div class="topbar-right"><a class="btn disabled"><span class="fa fa-cog"></span>install</a><a class="btn disabled"><span class="fa fa-play"></span>run</a></div>
+    </div>
+    <div class="content">
+      <div class="sidebar"></div>
+      <div id="editor" class="editor"></div>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/js-cookie/src/js.cookie.js"></script>
+    <script src="scripts/ace/ace.js"></script>
+    <script src="scripts/socket.io.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
