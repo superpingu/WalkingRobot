@@ -4,6 +4,7 @@
     <title>Walking Robot Editor</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/font-awesome.css">
+    <link rel="stylesheet" href="styles/treeview.css">
   </head>
   <body>
     <div class="topbar">
@@ -13,11 +14,18 @@
     <div class="content">
       <div class="sidebar"></div>
       <div id="editor" class="editor"></div>
+      <div class="console">
+        <div class="console-header"> <span class="fa fa-terminal"></span>Console</div>
+        <div style="right: 5vw" class="console-arrow"> <span class="fa fa-angle-up"></span></div>
+        <div style="left: 5vw" class="console-arrow"> <span class="fa fa-angle-up"></span></div>
+      </div>
     </div>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/js-cookie/src/js.cookie.js"></script>
     <script src="scripts/ace/ace.js"></script>
+    <script src="scripts/ace/ext-modelist.js"></script>
     <script src="scripts/socket.io.js"></script>
+    <script src="scripts/treeview.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

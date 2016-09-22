@@ -62,7 +62,7 @@ h3 {
     background: #e4342a;
     box-sizing: border-box;
     box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.94);
-    z-index: 10;
+    z-index: 200;
 }
 .topbar-title {
     position: relative;
@@ -99,6 +99,30 @@ h3 {
     width: 20vw;
     height: 100%;
     background-color: #4a4b46;
+    border-right: 1px #000000 solid;
+    z-index: 200;
+}
+.console {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80vw;
+    height: 5vh;
+    background-color: #3a3b36;
+    border-top: 1px #000000 solid;
+    z-index: 100;
+}
+.console-header, .console-arrow {
+    position: absolute;
+    top: 0.2vh;
+    height: 4.8vh;
+    font-size: 3vh;
+    color: #ecede8;
+}
+.console-header {
+    left: 0;
+    width: 100%;
+    text-align: center;
 }
 
 @font-face {
