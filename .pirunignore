@@ -1,0 +1,6 @@
+node_modules
+.pirunignore
+lib
+.DS_Store
+*/.DS_Store
+.git

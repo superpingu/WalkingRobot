@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/superpingu/WalkingRobot/issues"
   },
+  "dependencies": {
+      "@superpingu/walkinglib": "^0.1.2"
+  },
   "homepage": "https://github.com/superpingu/WalkingRobot#readme"
 }

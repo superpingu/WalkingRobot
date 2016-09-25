@@ -1,0 +1,28 @@
+module.exports = (robot) ->
+    robot.stepForward = robot.sequence()
+        .legFL.up()
+        .legRR.up()
+        .kneeFL.forward()
+        .kneeRR.forward()
+        .legFR.down()
+        .legRL.down()
+        .kneeFR.backward()
+        .kneeRL.backward()
+        .then()
+        .legFR.up()
+        .legRL.up()
+        .kneeFR.forward()
+        .kneeRL.forward()
+        .legFL.down()
+        .legRR.down()
+        .kneeFL.backward()
+        .kneeRR.backward()
+
+    robot.startPosition = robot.sequence()
+        .leg.down()
+        .kneeFR.forward()
+        .kneeRL.forward()
+        .kneeFL.backward()
+        .kneeRR.backward()
+        
+    return robot
