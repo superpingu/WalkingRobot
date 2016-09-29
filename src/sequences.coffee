@@ -24,5 +24,5 @@ module.exports = (robot) ->
         .kneeRL.forward()
         .kneeFL.backward()
         .kneeRR.backward()
-        
+
     return robot
